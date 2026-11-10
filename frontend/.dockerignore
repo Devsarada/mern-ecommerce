@@ -1,0 +1,13 @@
+# frontend/.dockerignore - build context = frontend/ folder
+
+node_modules
+dist
+.env
+.env.*
+*.log
+.vscode
+.idea
+**/.DS_Store
+Dockerfile*
+.dockerignore
+README.md
