@@ -1,0 +1,35 @@
+# .dockerignore - build context se bahar rakho (image chhoti + secrets safe)
+
+# dependencies (image ke andar dobara install hongi)
+**/node_modules
+
+# secrets - KABHI image mein nahi
+.env
+.env.*
+!.env.example
+
+# frontend ki apni alag image hai (frontend/Dockerfile)
+frontend
+
+# git, editor, OS files
+.git
+.gitignore
+.github
+.vscode
+.idea
+**/.DS_Store
+
+# logs, reports
+*.log
+coverage
+reports
+
+# docker / ci files khud
+**/Dockerfile*
+**/.dockerignore
+docker-compose*.yml
+Jenkinsfile
+
+# docs
+README.md
+LICENSE
