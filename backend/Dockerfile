@@ -24,7 +24,7 @@ FROM node:22-alpine AS runtime
 
 LABEL org.opencontainers.image.title="mern-backend" \
       org.opencontainers.image.description="MERN e-commerce backend (Express API)" \
-      org.opencontainers.image.source="https://github.com/Devsarada/mern-ecommerce"
+      org.opencontainers.image.source="https://github.com/burakorkmez/mern-ecommerce"
 
 ENV NODE_ENV=production \
     PORT=5000
@@ -40,6 +40,7 @@ COPY backend/lib ./backend/lib
 COPY backend/middleware ./backend/middleware
 COPY backend/models ./backend/models
 COPY backend/routes ./backend/routes
+COPY backend/scripts ./backend/scripts
 
 USER node
 
